@@ -1,0 +1,47 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-sans;
+}
+
+main {
+  @apply flex flex-col items-center justify-center min-h-screen;
+}
+
+h1 {
+  @apply text-4xl font-extrabold mb-6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+button {
+  @apply px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg shadow-lg hover:bg-yellow-600;
+}
+
+ul {
+  @apply list-disc pl-5;
+}
+
+li {
+  @apply mb-2;
+}
+
+div {
+  @apply bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-xl;
+}
