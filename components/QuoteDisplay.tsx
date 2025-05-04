@@ -58,7 +58,7 @@ export default function QuoteDisplay({ initialQuote }: QuoteDisplayProps) {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
-      <p className="text-lg italic mb-4 text-black">"{quote.content}"</p>
+      <p className="text-lg italic mb-4 text-black">&quot;{quote.content}&quot;</p>
       <p className="text-right font-bold mb-4">- {quote.author}</p>
       <div className="flex justify-between mb-4">
         <button onClick={fetchNewQuote}>New Quote</button>
@@ -72,7 +72,7 @@ export default function QuoteDisplay({ initialQuote }: QuoteDisplayProps) {
       <ul className="list-disc pl-5">
         {favorites.map((fav) => (
           <li key={fav.content} className="mb-2">
-            <p className="italic text-black">"{fav.content}"</p>
+            <p className="italic text-black">&quot;{fav.content}&quot;</p>
             <p className="text-right font-bold">- {fav.author}</p>
             <button
               onClick={() => removeFromFavorites(fav.content)}

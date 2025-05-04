@@ -5,7 +5,7 @@ export default async function Home() {
   let initialQuote;
   try {
     initialQuote = await fetchRandomQuote();
-  } catch (error) {
+  } catch {
     initialQuote = { content: "Unable to fetch quote.", author: "Unknown" };
   }
 
